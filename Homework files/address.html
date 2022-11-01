@@ -16,13 +16,15 @@
 			/* Write your CSS here */
 			* {
 				box-sizing: border-box;
-				padding: 0;
-				margin: 0;
+				/* padding: 0;
+				margin: 0; */
 			}
-			html {
-				font-family: Poppins;
+			/* html {
+				color: rgba(20, 41, 58, 1);
+				font-family: Poppins, sans-serif;
 				font-size: 18px;
 			}
+
 			h1 {
 				font-size: 1.8rem;
 				font-weight: 900;
@@ -46,14 +48,81 @@
 
 			.mail-logo {
 				padding-bottom: 1.4rem;
+			} */
+
+			.card {
+				color: rgba(20, 41, 58, 1);
+				font-family: Poppins, sans-serif;
+				font-size: 18px;
+				line-height: 1.55;
+				text-align: start;
+				/* text-align: end; */
 			}
+
+			.card p {
+				color: rgba(20, 41, 58, 0.8);
+			}
+
+			.card a
+			{
+				color: #FF5D00;
+				text-decoration: none;
+			}
+
+
+			.card h1 {
+				font-size: 1.75em;
+				font-weight: 900;
+				/* font-style: italic; */
+			}
+
+			p span {
+				font-size: 0.7em;
+				font-weight: 700;
+				line-height: 1.8;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+			}
+
+			/* Pseudo-classes */
+
+			.card a:hover {
+				color: rgba(20, 41, 58, 0.8);
+			}
+			.card a:active {
+				color: rgba(20, 41, 58, 0.5);
+			}
+
+
 
 		</style>
 	</head>
 	<body>
 		<section class="learn">
+			<div class="card">
+				<div class="mail-logo"><img src="images/address/envelopes-bulk.svg" alt="envelopes-bulk"></div>
+				<h1>Let's get in touch</h1>
+				<p> 9 Augusta Street <br>
+					Fair Lawn, NJ 07410
+				</p>
+				<hr>
+				<p>
+					<span>Email</span><br>
+					<a href="mailto:chuck@groundhouse.com">chuck@groundhouse.com</a>
+				</p>
+				<p>
+					<span>Phone</span><br>
+					<a href="tel:+1-202-555-0125">+1-202-555-0125</a>
+				</p>
+			</div>
+		
+
+
+
+		
 			<!-- Practice area start -->
-			<div class="mail-logo"><img src="images/address/envelopes-bulk.svg" alt=""></div>
+
+			<!-- <div class="mail-logo"><img src="images/address/envelopes-bulk.svg" alt=""></div>
 			<h1>Let's get in touch</h1>
 			<p>9 Augusta Street Fair Lawn, NJ 07410</p>
 			<div class="contact">
@@ -63,7 +132,8 @@
 			<div class="contact">
 				<h2>Phone</h2>
 				<p><a href="">+1-202-555-0125</a></p>
-			</div>
+			</div> -->
+
 			<!-- Practice area end -->
 		</section>
 
