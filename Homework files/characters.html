@@ -23,12 +23,90 @@
 				font: 18px/1.8 'Poppins';
 			}
 			.card {
+				/* display: grid;
+				grid-template-columns: 1fr; */
+
+
+				
+
+				/* This is how you can center vertically */
+				display: flex;
+				flex-direction: column;
+				padding-left: 260px;
+				justify-content: center;
+				/* justify is working vertically */
+
+				/* Optional */
+				align-items: flex-start;
+				/* I think flex-left or flex-start is the default, so it's not needed in this case */
+
+
+
+				
+				margin-bottom: 2rem;
 				border-radius: 16px;
 				width: 561px;
 				height: 297px;
-				margin-bottom: 2rem;
-				/* padding: 90px 20px 90px 250px; */
+				gap: 0;
 				
+				/* padding: 90px 20px 90px 250px; */
+			}
+
+			.card2 {
+				background-color: #00B29C;
+				border-radius: 16px;
+				margin-bottom: 2rem;
+				width: 561px;
+				height: 297px;
+				align-items: center;
+				display: flex;
+			}
+
+			.card3 {
+				background-color: #00B29C;
+				border-radius: 16px;
+				margin-bottom: 2rem;
+				width: 561px;
+				height: 297px;
+				display: grid;
+			
+				grid-template-columns: 1fr;
+				grid-template-rows: 1fr 5fr;
+			}
+
+			.wrapper {
+				background-color: aqua;
+				/* display: flex;
+				justify-content: center; */
+			}
+
+
+			.second-test {
+				list-style: none;
+				display: flex;
+				gap: 3rem;
+			}
+
+
+			.section {
+				display: grid;
+				gap: 2rem;
+				grid-template-columns: 1fr;
+			}
+
+			.two {
+				display: flex;
+				gap: 15px
+			}
+
+			.todo {
+				display: flex;
+				gap: 24px;
+				align-items: center;
+				background-color: #F5FBFA;
+				border-left: 8px solid #00B29C;
+				width: 500px;
+				height: 300px;
 			}
 
 			#viking {
@@ -46,6 +124,7 @@
 
 			.card h2{
 				font-weight: 900;
+				/* background-color: #00B29C; */
 			}
 			.title{
 				font-weight: 700;
@@ -53,9 +132,8 @@
 			.stats{
 				list-style: none;
 				display: flex;
-				gap: 3rem;
-				
-				
+				gap: 3rem;	
+				/* background-color: #93aaa7; */
 			}
 			
 			/* 
@@ -68,6 +146,33 @@
 				gap: 2.5rem;
 			} 
 			*/
+
+			
+			.todo eh {
+				/* Don't worry about the first 3 properties. */
+				/* They're just used for demo purposes. */
+				display: flex;
+				gap: 24px;
+				align-items: center;
+				background-color: #F5FBFA;
+				border-left: 8px solid #00B29C;
+				/* padding-top: 16px;
+				padding-bottom: 16px;
+				padding-left: 32px;
+				padding-right: 32px; */
+				width: 500px;
+				height: 400px;
+
+				/* Standard box model, applied by default:  */
+				 box-sizing: content-box;
+				 /* With this (content-box) the div is actually 472: 400+8+32+32 */
+			}
+			.todo.alternative{
+				box-sizing: border-box;
+				/* This is better used at the start for everything with * This way if I say div=400 it will BE 400, not 472 */
+			}
+
+			
 
 		</style>
 	</head>
@@ -98,6 +203,36 @@
 				</p> -->
 			</div>
 
+			<!-- <div class="card2">
+				
+				<div class="section">
+					<h2>Title</h2>
+					<div class="two">
+						<p>Hola</p>
+						<p>Bye!</p>
+					</div>
+
+				</div>
+			</div> -->
+<!-- 
+			<div class="wrapper">
+				<div class="card3">
+					<h3>The Mouse</h3>
+					<ul class="second-test">
+						<li>
+							<p class="title">68%</p>
+							<p>Win Rate</p>
+						</li>
+						<li>
+							<p class="title">522</p>
+							<p>Games Played</p>
+						</li>
+					</ul>
+				</div>
+			</div> -->
+
+
+
 			<div class="card" id="sorceress">
 				<h2>The Sorceress</h2>
 				<ul class="stats">
@@ -127,11 +262,26 @@
 
 			</div>
 
+
+
+			<div class="todo alternative">
+				
+
+				<div>
+					<h2>Robert Fox Portfolio</h2>
+					<p>Design the landing page</p>
+				</div>
+			</div>
+
+
 			<!-- Practice area end -->
 		</section>
 
 		<section class="preview" data-content="Characters">
 			<img width="720px" src="images/reference/characters.png" alt="Characters" />
 		</section>
+
+
+
 	</body>
 </html>
