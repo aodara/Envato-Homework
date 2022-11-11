@@ -14,13 +14,60 @@
 
 		<style>
 			/* Write your CSS here */
+			* {
+				box-sizing: border-box;
+				
+			}
+
+			.card {
+				color: rgb(0, 0, 0);
+				font: 18px/1.55 'Poppins', sans-serif;
+				/* line-height: 1.55; */
+				text-align: start;
+
+				
+
+			}
+			.card p {
+				color: rgb(75, 73, 73);
+			}
+			.card h1 {
+				font-size: 1.75em;
+				font-weight: 900;
+			}
+			p span {
+				text-transform: uppercase;
+				font-weight: 700;
+				font-size: .9rem;
+				letter-spacing: 1px;
+			}
+			.card a {
+				text-decoration: none;
+				color: tomato;
+			}
+			.card a:active{
+				color: rgb(14, 131, 185);
+			}
+			.card a:hover {
+				color: black;
+			}
 		</style>
 	</head>
 	<body>
 		<section class="learn">
 			<!-- Practice area start -->
-
-			<!-- Write your HTML here -->
+			<div class="card">
+				<img src="images/address/envelopes-bulk.svg" alt="">
+				<h1>Let's get in touch</h1>
+				<p>9 Augusta Street <br>
+					Fair Lawn, NJ 07410</p>
+				<hr>
+				<p><span>Email</span><br>
+				<a href="mailto:chuck@roundhouse.com">chuck@roundhouse.com</a></p>
+				<p><span>Phone</span><br>
+				<a href="tel:+1-202-555-0125">+1-202-555-0125</a></p>
+			</div>
+			
 
 			<!-- Practice area end -->
 		</section>

@@ -14,13 +14,118 @@
 
 		<style>
 			/* Write your CSS here */
+			*{
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				font: 18px/1.8 'Poppins';
+			}
+			.card {
+				border-radius: 16px;
+				width: 561px;
+				height: 297px;
+				margin-bottom: 2rem;
+				/* padding: 90px 20px 90px 250px; */
+				
+			}
+
+			#viking {
+				background-image: url(images/characters/bg-elephant.jpg);
+				background-size: 100%;
+			}
+			#sorceress {
+				background-image: url(images/characters/bg-cat.jpg);
+				background-size: 100%;
+			}
+			#fashionista {
+				background-image: url(images/characters/bg-bunny.jpg);
+				background-size: 100%;
+			}
+
+			.card h2{
+				font-weight: 900;
+			}
+			.title{
+				font-weight: 700;
+			}
+			.stats{
+				list-style: none;
+				display: flex;
+				gap: 3rem;
+				
+				
+			}
+			
+			/* 
+			.social-icons {
+				list-style: none;
+				flex allings them one next to each other
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 2.5rem;
+			} 
+			*/
+
 		</style>
 	</head>
 	<body>
 		<section class="learn">
 			<!-- Practice area start -->
 
-			<!-- Write your HTML here -->
+			<div class="card" id="viking">
+				<h2>The Viking</h2>
+				<ul class="stats">
+					<li>
+						<p class="title">68%</p>
+						<p>Win Rate</p> 
+					</li>
+					<li>
+						<p class="title">522</p>
+						<p>Games Played</p>
+					</li>
+				</ul>
+				
+				<!-- <p>
+					<span>68%</span><br>
+					Win Rate
+				</p>
+				<p>
+					<span>522</span><br>
+					Games Played
+				</p> -->
+			</div>
+
+			<div class="card" id="sorceress">
+				<h2>The Sorceress</h2>
+				<ul class="stats">
+					<li>
+						<p class="title">97%</p>
+						<p>Win Rate</p> 
+					</li>
+					<li>
+						<p class="title">1922</p>
+						<p>Games Played</p>
+					</li>
+				</ul>
+				
+			</div>
+			<div class="card" id="fashionista">
+				<h2>The Fashionista</h2>
+				<ul class="stats">
+					<li>
+						<p class="title">24%</p>
+						<p>Win Rate</p> 
+					</li>
+					<li>
+						<p class="title">124</p>
+						<p>Games Played</p>
+					</li>
+				</ul>
+
+			</div>
 
 			<!-- Practice area end -->
 		</section>

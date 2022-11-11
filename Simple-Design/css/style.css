@@ -1,0 +1,329 @@
+/* Reset */
+*{
+    /* Alternatice box model */
+    box-sizing: border-box;
+    
+    /* Reset padding and margin on all elements */
+    padding: 0;
+    margin:0;
+}
+
+/* 1. TYPOGRAPHY */
+/* 1.1 */
+html {
+    font-size: 18px;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    /* 28/18(the default font size) */
+    /* Remember that the line-height will be the font-size*value(with no unit, in this case: 1.55- 1.55*18px = 28 (28 se muestra en el diseño en Figma)) */
+    line-height: 1.55;
+    color: rgb(60, 58, 71);
+}
+
+/* 1.2 Headings */
+h1 {
+    font-size: 3.15rem;
+    font-weight: 700;
+    letter-spacing: -2px;
+}
+h2 {
+    font-size: 1.75rem;
+    font-weight: 300;
+    letter-spacing: -1px;
+    color: rgba(60, 58, 71, .8);
+}
+h3 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    letter-spacing: -2px;
+    margin-bottom: 2rem;
+}
+
+h3.large {
+    font-size: 3.15rem;
+}
+
+.dark h3 {
+    color: rgb(255, 255, 255);
+}
+
+h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    /* 24/18=1.3rem */
+    /* margin-bottom: 1.3rem; */
+    /* But to make it more easy: 1rem and notice is the same as the margin-bottom of p */
+    margin-bottom: 1rem;
+}
+
+/* 1.3 Paragraphs */
+
+p {
+    margin-bottom: 1rem;
+}
+
+p.section-intro {
+    /* Ultralight */
+    font-weight: 200;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.dark p.section-intro {
+    color: rgba(255, 255, 255, .8);
+}
+
+p.number {
+    /* font-size: 43/18=2.4rem; */
+    font-size: 2.4rem;
+    font-weight: 200;
+    color: rgba(60, 58, 71, .5);
+}
+
+p.large {
+    /* font-size: 32/18=1.75rem; */
+    font-size: 1.75rem;
+    font-weight: 200;
+    letter-spacing: -1px;
+
+}
+
+/* 1.4 Links */
+
+a {
+    font-weight: 700;
+    text-decoration: none;
+    color: rgb(159, 118, 87);
+}
+
+a:hover {
+    color: rgb(60, 58, 71);
+}
+
+/* 1.5 Forms  */
+/* Sometime they don't inherit those values */
+form input,
+form textarea,
+form button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    line-height: 1.55;
+}
+
+/* CONTAINER Elements*/
+.container {
+    width: 80%;
+    /* 0 >> Top Bottom (not that impotant but neccessary) */
+    /* auto sets the same margin at the left and the right */
+    /* So, basically auto center the container */
+    margin: 0 auto;
+}
+
+.container.small {
+    width: 60%;
+    /* max-width: 640/18=35.55px; */
+    max-width: 35rems;
+}
+
+/* From top to bottom */
+/* HEADER */
+
+#main-header,
+section {
+    /* 240/18=13 */
+    /* Top-Bottom:13rem Left&Right: 0 */
+    padding: 13rem 0;
+    text-align: center;
+}
+#main-header h1 {
+    /* 228/18=7.11 */
+    margin: 7rem 0 1rem 0;
+}
+#main-header h2 {
+    /* 228/18=7.11 */
+    margin-bottom: 7rem;
+}
+
+/* BUTTON */
+
+.btn {
+    /* 24/18:1.3rem & 64/18=3.5 */
+    padding: 1.3rem 3.5rem;
+    border: 1px solid rgb(159, 118, 87);
+    font-weight: 700;
+}
+.btn:hover{
+    background-color: rgb(60, 58, 71);
+    border-color: rgb(60, 58, 71);
+    color: rgb(255, 255, 255);
+
+}
+
+/* CHAIR SECTION */
+
+#our-chairs {
+    background-color: #eff0ea;
+}
+section header {
+    margin-bottom: 3.5rem;
+}
+
+/* This selects the paragraph that immediately follows the h3 */
+h3 + p {
+    max-width: 35rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3.5rem;
+    /* margin-bottom: 3.5rem; 64/18 */
+    margin-bottom: 3.5rem;
+}
+img {
+    max-width: 100%;
+    /* They can't be bigger than their parent container */
+}
+
+.gallery div {
+    /* text-align: left; or */
+    text-align: start;
+    
+}
+.gallery img {
+    /* 24/18=1.3 */
+    margin-bottom: 1.3rem;
+}
+
+/* Contact */
+.dark {
+    background-color: rgb(60, 58, 71);
+}
+
+.dark label {
+    color: rgba(255, 255, 255, .8);
+}
+
+form div {
+    /* 32/18 */
+    margin-bottom: 1.75rem;
+}
+
+form label {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: start;
+}
+form input,
+form textarea {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    padding: 1rem;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    resize: none;
+
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    background-color: rgb(255, 255, 255, .1)
+}
+
+form button {
+    width: 100%;
+    cursor: pointer;
+}
+/* Styles are using button class* as parent: The button turns black when hover */
+/* *<button class="btn">Send Message</button>, so we need to overwrite */
+
+.dark .btn {
+    border: 1px solid rgba(255, 255, 255, .8);
+    background: transparent;
+    color: rgb(255, 255, 255);
+}
+
+.dark .btn:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(60, 58, 71);
+}
+
+p.muted {
+    color: rgba(255, 255, 255, .5)
+}
+
+/* The paragraph that immediately proceeds after form button */
+form button + p {
+    margin-top: 1.75rem;
+    /* or target the form button with the margin-bottom, it's up to YOU */
+}
+
+/* Visit Store */
+.social-icons {
+    list-style: none;
+    /* flex allings them one next to each other */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+}
+p.large + .social-icons {
+    margin-top: 7rem;
+}
+
+footer {
+    padding: 5rem 0;
+}
+
+footer p {
+    text-align: center;
+}
+
+/* Responsive */
+/* Reduce the size font for screens less than 600px (mobile)*/
+@media screen and (max-width: 600px) {
+    h1,
+    h3.large {
+        font-size: 2.3rem;
+    }
+    h2,
+    p.large {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+
+    .container.small {
+        width: 85%;
+    }
+
+    #main-header, 
+    section {
+        padding: 6rem 0;
+    }
+
+    footer {
+        padding: 2.5rem 0;
+    }
+
+    p.large + .social-icons {
+        margin-top: 3.5rem;
+    }
+    #main-header h1 {
+        margin-top: 3.5rem;
+    }
+}  
+
+@media screen and (max-width: 800px){
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
