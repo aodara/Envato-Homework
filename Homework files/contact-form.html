@@ -14,6 +14,43 @@
 
 		<style>
 			/* Write your CSS here */
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: content-box;
+			}
+			.contact {
+				font-family: 'Poppins', sans-serif;
+				color: rgb(49, 49, 49);
+			
+			}
+
+			h1 {
+				font-weight: 900;
+				padding-bottom: 1.2rem;
+			}
+
+			.section {
+				margin-bottom: 1rem;
+				
+			}
+
+			label {
+				display: block;
+				text-transform: uppercase;
+				font-weight: 900;
+				font-size: .55rem;
+				letter-spacing: 0.2px;
+				padding-bottom: .2rem;
+			}
+
+			button {
+				background-color: rgb(68, 134, 255);
+				color: white;
+			}
+
+
+
 		</style>
 	</head>
 	<body>
@@ -21,6 +58,56 @@
 			<!-- Practice area start -->
 
 			<!-- Write your HTML here -->
+			<div class="contact">
+				<img src="images/contact-form/envelope.svg" alt="mail icon">
+				<h1>Let's get in touch</h1>
+
+				<form action="contact.php" method="get">
+					<!--get: unencrypted information-->
+					<div class="section">
+						<label for="send-name">Name</label>
+						<input type="text" name="send-name" id="send-name" placeholder="Chuck Norris" autofocus>
+					</div>
+
+					<div class="section">
+						<label for="send-email">Email Address</label>
+						<input type="email" name="send-email" id="send-email" disabled value="chuck@roundhouse.com">
+					</div>
+					
+					<div class="section">
+						<label for="send-department">Department</label>
+						<select name="send-department" id="send-department">
+							<option value="">Select a department</option>
+						</select>
+						
+					</div>
+
+					<div class="section">
+						<label for="send-message">Message</label>
+						<textarea name="send-message" id="send-message" cols="30" rows="10">Hey, I'd like to get in touch with your sales department regarding a possible collaboration</textarea>
+						
+					</div>
+
+					<button>Send Message</button>
+
+
+				</form> 
+
+				 
+				<!-- <input type="Chuck Norris">
+				email address
+				<input type="">
+				department
+				message
+
+				. -->
+
+
+				
+
+			</div>
+
+
 
 			<!-- Practice area end -->
 		</section>
