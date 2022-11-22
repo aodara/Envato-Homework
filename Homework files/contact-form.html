@@ -17,7 +17,7 @@
 			* {
 				margin: 0;
 				padding: 0;
-				box-sizing: content-box;
+				box-sizing: border-box;
 			}
 			.contact {
 				font-family: 'Poppins', sans-serif;
@@ -25,31 +25,65 @@
 			
 			}
 
+			img {
+				padding-bottom: 1.2rem;
+			}
+
 			h1 {
 				font-weight: 900;
 				padding-bottom: 1.2rem;
 			}
 
-			.section {
+			div {
 				margin-bottom: 1rem;
 				
 			}
 
 			label {
 				display: block;
+				width: 100%;
 				text-transform: uppercase;
 				font-weight: 900;
-				font-size: .55rem;
+				font-size: .65rem;
 				letter-spacing: 0.2px;
-				padding-bottom: .2rem;
+				padding-bottom: .25rem;
 			}
 
-			button {
-				background-color: rgb(68, 134, 255);
+			.button {
+				background-color: rgb(59, 141, 235);
+				padding: 1rem 2rem;
 				color: white;
+				border-radius: 8px;
+				font-weight: 700;
+				text-align: center;
+				text-decoration: none;
+				border: 0 none;
+				width: 100%;
+				display: inline-block;
+
+				cursor: pointer;
+			}
+			.button:hover{
+				background-color: rgb(33, 111, 201);
 			}
 
+			input, textarea, select{
+				background-color: rgba(0, 0, 0, 0.04);
+				width: 100%;
+				border: 0;
+				border-radius: 8px;
+				padding: 1rem;
+				font-family: 'Poppins', sans-serif;
+				color: rgb(36, 46, 68, 0.7);
+				resize: none;
+			}
 
+			input:focus,
+			textarea:focus,
+			select:focus{
+				outline: none;
+				background-color: rgba(0, 0, 0, 0.07);
+			}
 
 		</style>
 	</head>
@@ -64,31 +98,34 @@
 
 				<form action="contact.php" method="get">
 					<!--get: unencrypted information-->
-					<div class="section">
+					<div>
 						<label for="send-name">Name</label>
 						<input type="text" name="send-name" id="send-name" placeholder="Chuck Norris" autofocus>
 					</div>
 
-					<div class="section">
+					<div>
 						<label for="send-email">Email Address</label>
 						<input type="email" name="send-email" id="send-email" disabled value="chuck@roundhouse.com">
 					</div>
 					
-					<div class="section">
+					<div>
 						<label for="send-department">Department</label>
 						<select name="send-department" id="send-department">
 							<option value="">Select a department</option>
+							<option value="">Department1</option>
+							<option value="">Department2</option>
+							<option value="">Department3</option>
 						</select>
 						
 					</div>
 
-					<div class="section">
+					<div>
 						<label for="send-message">Message</label>
 						<textarea name="send-message" id="send-message" cols="30" rows="10">Hey, I'd like to get in touch with your sales department regarding a possible collaboration</textarea>
 						
 					</div>
 
-					<button>Send Message</button>
+					<a href="" class="button">Send Message</a>
 
 
 				</form> 

@@ -14,6 +14,78 @@
 
 		<style>
 			/* Write your CSS here */
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+				font-family: 'Poppins', sans-serif;
+				font-size: 16px;
+				color: rgba(0, 0, 0, 0.8);
+			}
+			h1 {
+				font-weight: 900;
+				padding-bottom: 2.5rem;
+				font-size: 1.55rem;
+			}
+			h2{
+				font-size: 1.25rem;
+				font-weight: 900;
+			}
+			.dashboard{
+				display: flex;
+				gap: 2rem;
+			}
+			.card {
+				border: 2px solid rgba(0, 0, 0, 0.075);
+				padding: 2rem;
+			}
+			.content {
+				/* padding: 0rem 0px; */
+			}
+			.stats {
+				padding: 2rem 0px;
+				display: flex;
+				gap: 2px
+			}
+			.stats p{
+				font-size: 0.7rem;
+				color: rgba(0, 0, 0, 0.692);
+			}
+			.button {
+				border: 1px solid rgba(0, 0, 0, 0.75);
+				border-radius: 4px;
+				font-size: 0.8rem;
+				display: flex;
+				gap: 4px;
+				align-items: center;
+				justify-content: center;
+				font-weight: 600;
+				padding: .6rem 2rem;
+				width: 125px;
+			}
+
+			span {
+				color: rgb(8, 184, 87);
+				font-size: .9rem;
+				font-weight: 500;
+			}
+
+			.tittle-img{
+				width: 4rem;
+				padding-bottom: 1rem;
+			}
+
+			.dashboard .card .stats img{
+				width: 1.2rem;
+			}
+
+			.dashboard .card .button img{
+				height: 1rem;
+				/* margin: .75rem 0 0 0; */
+			}
+			.red {
+				color: rgb(216, 9, 9);
+			}
 		</style>
 	</head>
 	<body class="flip">
@@ -21,6 +93,54 @@
 			<!-- Practice area start -->
 
 			<!-- Write your HTML here -->
+			<h1>Dashboard</h1>
+			<div class="dashboard">
+				<div class="card">
+					<img src="images/dashboard/icon-money.svg" alt="" class="tittle-img">
+					<div class="content">
+						<h2>$4,502</h2>
+						<p>Earned this month</p>
+					</div>
+					<div class="stats">
+						<img src="images/dashboard/icon-arrow-green.svg" alt="">
+						<p><span>+6.05% </span>than last month</p>
+					</div>
+					<div class="button">
+						Earnings
+						<img src="images/dashboard/icon-arrow-right.svg" alt="">
+					</div>
+				</div>
+				<div class="card">
+					<img src="images/dashboard/icon-sales.svg" alt="" class="tittle-img">
+					<div class="content">
+						<h2>22</h2>
+						<p>New Sales</p>
+					</div>
+					<div class="stats">
+						<img src="images/dashboard/icon-arrow-green.svg" alt="">
+						<p><span>+16.64%</span> than last month</p>
+					</div>
+					<div class="button">
+						Sales
+						<img src="images/dashboard/icon-arrow-right.svg" alt="">
+					</div>
+				</div>
+				<div class="card">
+					<img src="images/dashboard/icon-chat.svg" alt="" class="tittle-img">
+					<div class="content">
+						<h2>7</h2>
+						<p>New comments</p>
+					</div>
+					<div class="stats">
+						<img src="images/dashboard/icon-arrow-red.svg" alt="">
+						<p><span class="red">-19%</span> than last month</p>
+					</div>
+					<div class="button">
+						Comments 
+						<img src="images/dashboard/icon-arrow-right.svg" alt="" class="main-icon">
+					</div>
+				</div>
+			</div>
 
 
 
